@@ -40,7 +40,7 @@ button.addEventListener("click", function () {
     }
   }
   // NON MI è MOLTO CHIARO PERCHè DOBBIAMO FARE IL PASSAGGIO DEL TRUE
-  if (emailcheck === true) {
+  if (emailcheck) {
     document.getElementById("result").innerHTML = `${useremail}, Benvenuto!`;
     //console.log(useremail, "Benvenuto");
   } else {
@@ -49,11 +49,27 @@ button.addEventListener("click", function () {
   }
 });
 
+
 /*
 Gioco dei dadi
 Generare un numero random da 1 a 6, sia per il giocatore sia per il computer.
 Stabilire il vincitore, in base a chi fa il punteggio più alto.
+/*
+Per generare un numero random in js abbiamo bisogno di una funzione che randomizza un certo numero di elementi.
+abbiamo inoltre bisogno di una variabile per definire l'utente e una variabile per il pc
+*/
+//definiamo una variabile alla quale associamo il bottone
+let game = document.getElementById("game");
 
+game.addEventListener('click', function(){
+
+  getRndInteger(1, 6);
+  console.log(getRndInteger);
+
+
+})
+
+/*
 Prima di partire a scrivere codice poniamoci qualche domanda:
 Che ci sia un array da qualche parte?
 Se dobbiamo confrontare qualcosa che "cosa" ci serve?
