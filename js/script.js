@@ -39,10 +39,14 @@ button.addEventListener("click", function () {
       emailcheck = true;
     }
   }
+  // NON MI è MOLTO CHIARO PERCHè DOBBIAMO FARE IL PASSAGGIO DEL TRUE
   if (emailcheck === true) {
-    console.log(useremail, "Benvenuto");
+    document.getElementById("result").innerHTML = `${useremail}, Benvenuto!`;
+    //console.log(useremail, "Benvenuto");
+  } else {
+    document.getElementById("result").innerHTML = `${useremail}, Email non trovata!`;
+    //console.log(useremail, 'Email non trovata!');
   }
-  else console.log(useremail, 'Devi registrarti');
 });
 
 /*
