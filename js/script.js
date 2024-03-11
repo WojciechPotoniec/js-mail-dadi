@@ -14,7 +14,7 @@ Per controllare che sia nella lista abbiamo bisogno di una lista che creeremo co
 */
 
 //dichiaro variabile button e la seleziono dall'html tramite la classe .btn
-let button = document.querySelector(".btn"); 
+let button = document.querySelector(".btn");
 //console.log(button);
 
 //aggiungo ascoltatore al click per il bottone
@@ -24,7 +24,9 @@ button.addEventListener("click", function () {
   //estraggo il valore inserito dall'utente tramite l'id associato nell'HTML
   let useremail = document.getElementById("userEmail").value;
   //console.log(useremail);
-  
+
+  let emailcheck = false;
+
   //definisco la variabile emails creando un ARRAY
   let emails = [
     "esempio1@gmail.com",
@@ -33,12 +35,14 @@ button.addEventListener("click", function () {
   ];
   /* Ciclo FOR */
   for (let i = 0; i < emails.length; i++) {
-    //console.log(emails[i]);
-    if(useremail === emails){
-        console.log(useremail, 'Benvenuto, sei un utente registrato');
+    if (useremail === emails[i]) {
+      emailcheck = true;
     }
-    else console.log('Devi registrarti per accedere');
-    }
+  }
+  if (emailcheck === true) {
+    console.log(useremail, "Benvenuto");
+  }
+  else console.log(useremail, 'Devi registrarti');
 });
 
 /*
