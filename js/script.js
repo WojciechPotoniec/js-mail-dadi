@@ -62,7 +62,7 @@ abbiamo inoltre bisogno di una variabile per definire l'utente e una variabile p
 //definiamo una variabile alla quale associamo il bottone
 
 let game = document.getElementById("game");
-console.log(game);
+//console.log(game);
 
 game.addEventListener("click", function () {
   function getRndInteger(min, max) {
