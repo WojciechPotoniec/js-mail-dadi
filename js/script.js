@@ -3,7 +3,40 @@ Mail
 Chiedi all’utente la sua email,
 controlla che sia nella lista di chi può accedere,
 stampa un messaggio appropriato sull’esito del controllo.
+*/
 
+
+//dichiaro variabile button e la seleziono dall'html tramite la classe .btn
+let button = document.querySelector(".btn"); 
+//console.log(button);
+
+//aggiungo ascoltatore al click per il bottone
+button.addEventListener("click", function () {
+  //console.log('Hai cliccato il bottone');
+
+  //estraggo il valore inserito dall'utente tramite l'id associato nell'HTML
+  let useremail = document.getElementById("userEmail").value;
+  //console.log(useremail);
+  let emailCheck = true;
+
+  //definisco la variabile emails creando un ARRAY
+  let emails = [
+    useremail,
+    "esempio2@gmail.com",
+    "esempio3@gmail.com",
+  ];
+
+  for (let i = 0; i < emails.length; i++) {
+    console.log(emails[i]);
+    if(emails === true){
+        console.log(emails, 'Benvenuto');
+    }
+    else(emails === false) 
+        console.log('Devi registrarti per accedere');
+    }
+});
+
+/*
 Gioco dei dadi
 Generare un numero random da 1 a 6, sia per il giocatore sia per il computer.
 Stabilire il vincitore, in base a chi fa il punteggio più alto.
