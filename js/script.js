@@ -75,14 +75,14 @@ game.addEventListener("click", function () {
   console.log(usernumber);
 
   if(pcnumber === usernumber){
-    document.getElementById('result').innerHTML = `${pcnumber} E' un Pareggio, Riprova ${usernumber}`;
+    document.getElementById('result').innerHTML = `${pcnumber} - ${usernumber} E' un Pareggio, Riprova!`;
     console.log`E' un Pareggio, Riprova`;
   }
   else if(pcnumber > usernumber){
-    document.getElementById('result').innerHTML = `${usernumber} Il computer Ha Vinto! ${pcnumber}`;
+    document.getElementById('result').innerHTML = `${usernumber} - ${pcnumber} Il computer Ha Vinto!`;
     console.log`Il computer Ha Vinto!`;
   }
-  else document.getElementById('result').innerHTML = `${usernumber} Hai Vinto ${pcnumber}`;
+  else document.getElementById('result').innerHTML = `${usernumber} - ${pcnumber} Hai Vinto!`;
   console.log `Hai Vinto`;
 });
 
