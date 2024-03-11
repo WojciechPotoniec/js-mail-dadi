@@ -5,6 +5,13 @@ controlla che sia nella lista di chi può accedere,
 stampa un messaggio appropriato sull’esito del controllo.
 */
 
+/* 
+per chiedere l'email all'utente, 
+dobbiamo attribuire ad un tag input un id e poi prenderci il valore tramite .value.
+(Il valore lo andremo a prendere in questo caso dopo aver cliccato sul bottone).
+Per controllare che sia nella lista abbiamo bisogno di una lista che creeremo con un ARRAY.
+
+*/
 
 //dichiaro variabile button e la seleziono dall'html tramite la classe .btn
 let button = document.querySelector(".btn"); 
@@ -17,22 +24,20 @@ button.addEventListener("click", function () {
   //estraggo il valore inserito dall'utente tramite l'id associato nell'HTML
   let useremail = document.getElementById("userEmail").value;
   //console.log(useremail);
-  let emailCheck = true;
-
+  
   //definisco la variabile emails creando un ARRAY
   let emails = [
-    useremail,
+    "esempio1@gmail.com",
     "esempio2@gmail.com",
     "esempio3@gmail.com",
   ];
-
+  /* Ciclo FOR */
   for (let i = 0; i < emails.length; i++) {
-    console.log(emails[i]);
-    if(emails === true){
-        console.log(emails, 'Benvenuto');
+    //console.log(emails[i]);
+    if(useremail === emails){
+        console.log(useremail, 'Benvenuto, sei un utente registrato');
     }
-    else(emails === false) 
-        console.log('Devi registrarti per accedere');
+    else console.log('Devi registrarti per accedere');
     }
 });
 
